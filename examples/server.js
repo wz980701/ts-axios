@@ -70,6 +70,10 @@ router.get('/error/timeout', function (req, res) {
   }, 3000)
 })
 
+router.get('/interceptor/get', function (req, res) {
+  res.json(req.headers)
+})
+
 app.use(router)
 
 const port = process.env.PORT || 8081
